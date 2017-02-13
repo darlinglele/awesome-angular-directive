@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title></title>
+	<script src="angular.min.js"></script>
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src='directive.js'></script>
+	<script src='service.js'></script>
+	<script src="app.js"></script>
+	<style type="text/css">
+		.editor{
+			background: grey;
+			height: 100px;
+			width: 400px;
+			border-radius: 5px;
+			padding: 5px;
+		}
+		.mention-list .selected{
+			background: red;
+		}
+		body{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	</style>
+</head>
+<body ng-controller="EditorController as vm">
+<h1>Type '@' to show the mention list</h2>
+
+<div  class="editor" on-mention-start="vm.onMentionStart(options)" contenteditable="true" focus></div>
+
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+<div class="mention-list" style="background: yellow" on-arrow-up="vm.prev()" on-select-confirm="vm.select(vm.selected)" on-arrow-down="vm.next()">
+  <div ng-repeat="x in vm.members" on-mouse-down="vm.select(x)">
+    <div>
+      <img style="width: 40px; height: 40px;" ng-src="{{x.avatar| avatar}}">
+      <span> {{x.name}}</span>
+    </div>
+  </div>
+</div>
